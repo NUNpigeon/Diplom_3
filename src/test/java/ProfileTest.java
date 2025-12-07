@@ -2,7 +2,7 @@ import io.qameta.allure.Description;
 import io.qameta.allure.junit4.DisplayName;
 import org.example.api.config.PageUrl;
 import org.example.api.models.CreateUserRequest;
-import org.example.api.pages.Login;
+import org.example.api.pages.LoginPage;
 import org.example.api.pages.MainConstructor;
 import org.example.api.pages.Profile;
 import org.junit.Test;
@@ -24,7 +24,7 @@ public class ProfileTest extends BaseTest {
 
         // Логин через UI
         driver.get(PageUrl.LOGIN_PAGE_URL);
-        Login login = new Login(driver);
+        LoginPage login = new LoginPage(driver);
         login.login(testUser.getEmail(), testUser.getPassword());
 
         // Переход в профиль и выход

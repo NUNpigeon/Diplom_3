@@ -11,7 +11,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-public class Login {
+public class LoginPage {
     private final WebDriver driver;
 
     @FindBy(xpath = ".//input[@type='text']")
@@ -23,7 +23,7 @@ public class Login {
     @FindBy(xpath = ".//button[text()='Войти']")
     private WebElement loginButton;
 
-    public Login(WebDriver driver) {
+    public LoginPage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }

@@ -2,7 +2,7 @@ import io.qameta.allure.Description;
 import io.qameta.allure.junit4.DisplayName;
 import io.restassured.response.ValidatableResponse;
 import org.example.api.config.PageUrl;
-import org.example.api.pages.Login;
+import org.example.api.pages.LoginPage;
 import org.example.api.pages.MainConstructor;
 import org.example.api.pages.PasswordRecovery;
 import org.example.api.pages.RegistrationUser;
@@ -104,7 +104,7 @@ public class LoginTest extends BaseTest {
     }
 
     private void performLogin() {
-        Login login = new Login(driver);
+        LoginPage login = new LoginPage(driver);
         login.login(testUser.getEmail(), testUser.getPassword());
     }
 }

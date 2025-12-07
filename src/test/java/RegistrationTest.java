@@ -3,7 +3,7 @@ import io.qameta.allure.junit4.DisplayName;
 import org.example.api.config.PageUrl;
 import org.example.api.config.TestDataModel;
 import org.example.api.models.User;
-import org.example.api.pages.Login;
+import org.example.api.pages.LoginPage;
 import org.example.api.pages.RegistrationUser;
 import org.junit.Test;
 
@@ -29,7 +29,7 @@ public class RegistrationTest extends BaseTest {
         testUser = newUser;
 
 
-        Login login = new Login(driver);
+        LoginPage login = new LoginPage(driver);
         assertTrue(
                 "Редирект на страницу логина не произошёл",
                 login.isLoginButtonDisplayed()
