@@ -46,7 +46,7 @@ public class LoginTest extends BaseTest {
     private void createTestUser() {
         ValidatableResponse response = userApiClient.createUser(
                 new CreateUserRequest(testUser.getEmail(), testUser.getPassword(), testUser.getName()));
-        response.statusCode(201);
+        response.statusCode(200);
     }
 
     @Test
